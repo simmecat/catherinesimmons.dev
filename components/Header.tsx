@@ -1,20 +1,25 @@
 import Image from "next/image";
 
 import { Text } from "@nextui-org/react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
-import githubLogo from "../public/github.png";
-import itchioLogo from "../public/itchio.png";
-import linkedinLogo from "../public/linkedin.png";
+import githubLightLogo from "../public/images/github-light.png";
+import githubLogo from "../public/images/github.png";
+import itchioLogo from "../public/images/itchio.png";
+import linkedinLogo from "../public/images/linkedin.png";
 
 export default function Header() {
+  const { resolvedTheme } = useTheme();
+  const [githubImage, setGithubImage] = useState(githubLogo);
+
+  useEffect(() => {
+    setGithubImage(resolvedTheme === "light" ? githubLogo : githubLightLogo);
+  }, [resolvedTheme]);
+
   return (
     <div className="flex flex-col mb-4">
-      <Text
-        className="font-bold m-0 text-4xl md:text-7xl"
-        css={{
-          textGradient: "45deg, $purple500 -20%, $pink500 100%",
-        }}
-      >
+      <Text className="font-bold m-0 text-4xl md:text-7xl">
         Catherine Simmons
       </Text>
       <div className="flex flex-row justify-between">
@@ -26,7 +31,7 @@ export default function Header() {
             target="_blank"
             rel="noreferrer"
           >
-            <Image src={githubLogo} alt="GitHub Logo" height={25} width={25} />
+            <Image src={githubImage} alt="GitHub Logo" height={25} width={25} />
           </a>
           <a
             className="my-auto h-[25px]"

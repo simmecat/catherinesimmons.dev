@@ -1,52 +1,37 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { Button } from "@nextui-org/react";
-
 export default function NavBar() {
   const router = useRouter();
-  const aboutMeRoute = "/";
-  const projectsRoute = "/projects";
-  const resumeRoute = "/resume";
+  const aboutRoute = "/";
+  const portfolioRoute = "/portfolio";
 
   function isActiveRoute(href: string): boolean {
-    return router.asPath === href;
+    if (href === aboutRoute) {
+      return router.asPath === aboutRoute;
+    }
+
+    return router.asPath.includes(href);
+  }
+
+  function getColor(href: string): string {
+    return isActiveRoute(href) ? "text-zinc-400" : "";
   }
 
   return (
-    <nav className="flex flex-row gap-2 mb-8">
-      <Link passHref href={aboutMeRoute}>
-        <Button
-          color="gradient"
-          auto
-          rounded
-          animated={false}
-          bordered={!isActiveRoute(aboutMeRoute)}
-        >
-          <a>About Me</a>
-        </Button>
+    <nav className="flex flex-row gap-12 mb-8">
+      <Link href={aboutRoute}>
+        <a className={`font-bold text-xl ${getColor(aboutRoute)}`}>About</a>
       </Link>
-      <Link passHref href={projectsRoute}>
-        <Button
-          color="gradient"
-          auto
-          rounded
-          animated={false}
-          bordered={!isActiveRoute(projectsRoute)}
-        >
-          <a>Projects</a>
-        </Button>
+      <Link href={portfolioRoute}>
+        <a className={`font-bold text-xl ${getColor(portfolioRoute)}`}>
+          Portfolio
+        </a>
       </Link>
-      <Link passHref href={resumeRoute}>
-        <Button
-          color="gradient"
-          auto
-          rounded
-          animated={false}
-          bordered={!isActiveRoute(resumeRoute)}
-        >
-          <a>Resume</a>
-        </Button>
+      <Link href="../pdfs/resume.pdf">
+        <a className="font-bold text-xl" target="_blank" rel="noreferrer">
+          Resume
+        </a>
       </Link>
     </nav>
   );

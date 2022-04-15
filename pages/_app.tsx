@@ -13,13 +13,17 @@ function MyApp({ Component, pageProps }: AppProps) {
   const lightTheme = createTheme({
     type: "light",
   });
+  const darkTheme = createTheme({
+    type: "dark",
+  });
 
   return (
     <ThemeProvider
-      defaultTheme="light"
+      defaultTheme="system"
       attribute="class"
       value={{
         light: lightTheme.className,
+        dark: darkTheme.className
       }}
     >
       <NextUIProvider>
