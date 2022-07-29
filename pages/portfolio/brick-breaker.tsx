@@ -13,20 +13,24 @@ export default function BrickBreaker() {
       <div className="mt-4">
         <Text className="font-bold">Contribution</Text>
         <ul className="list-disc ml-6">
-          <li>Implemented gameplay using C#</li>
+          <li>Implemented gameplay using C#.</li>
           <li>
-            Created a level controller to manage score and level progression
+            Created a level controller to manage score and level progression.
           </li>
-          <li>Designed five levels and three power-ups</li>
-          <li>Created pixel assets using Asperite</li>
-          <li>Sourced and implemented sound effects</li>
-          <li>Utilized Figma to prototype UI and game layout</li>
-          <li>Created a kanban board to set deadlines and meet requirements</li>
-          <li>Utilized source control</li>
+          <li>Designed five levels and three power-ups.</li>
+          <li>Created pixel assets using Asperite.</li>
+          <li>Sourced and implemented sound effects.</li>
+          <li>Utilized Figma to prototype UI and game layout.</li>
+          <li>Created a kanban board to set deadlines and meet requirements.</li>
+          <li>Utilized source control.</li>
           <li>
-            Utilized organization tools and source control (Figma, kanban, Git)
+            Utilized organization tools and source control (Figma, kanban, Git).
           </li>
         </ul>
+      </div>
+
+      <div className="mt-4">
+        <Text className="font-bold">Password: brickbreaker</Text>
       </div>
 
       <div className="flex flex-row flex-wrap gap-4 justify-center mt-4">

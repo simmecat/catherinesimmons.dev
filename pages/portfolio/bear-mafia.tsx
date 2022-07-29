@@ -15,25 +15,25 @@ export default function BearMafia() {
       <div className="mt-4">
         <Text className="font-bold">Contribution</Text>
         <ul className="list-disc ml-6">
-          <li>Led the team in charge of art, concept, and narrative design</li>
-          <li>Wrote and maintained game design document</li>
+          <li>Led the team in charge of art, concept, and narrative design.</li>
+          <li>Wrote and maintained game design document.</li>
           <li>
             Refined player experience by creating a strong concept, specific
-            worldbuilding elements, and a relevant aesthetic
+            worldbuilding elements, and a relevant aesthetic.
           </li>
           <li>
             Strengthened worldbuilding through the game&apos;s cards by creating
-            actions/events relevant to the game world and theme
+            actions/events relevant to the game world and theme.
           </li>
           <li>
             Created concept art/artboards to narrow down game aesthetic with
-            team
+            team.
           </li>
-          <li>Designed game pieces and cards in Adobe Illustrator</li>
-          <li>Conducted playtesting with university students</li>
+          <li>Designed game pieces and cards in Adobe Illustrator.</li>
+          <li>Conducted playtesting with university students.</li>
           <li>
             Made adjustments to game elements based on student and professor
-            critique
+            critique.
           </li>
         </ul>
       </div>

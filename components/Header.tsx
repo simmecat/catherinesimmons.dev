@@ -8,6 +8,7 @@ import githubLightLogo from "../public/images/github-light.png";
 import githubLogo from "../public/images/github.png";
 import itchioLogo from "../public/images/itchio.png";
 import linkedinLogo from "../public/images/linkedin.png";
+import twitterLogo from "../public/images/twitter.png";
 
 export default function Header() {
   const { resolvedTheme } = useTheme();
@@ -27,6 +28,14 @@ export default function Header() {
         <div className="flex flex-row gap-2">
           <a
             className="my-auto h-[25px]"
+            href="https://twitter.com/simmecat"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image src={twitterLogo} alt="Twitter Logo" height={25} width={25} />
+          </a>
+          <a
+            className="my-auto h-[25px] w-[25px]"
             href="https://github.com/simmecat"
             target="_blank"
             rel="noreferrer"

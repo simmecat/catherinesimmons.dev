@@ -26,12 +26,11 @@ export default function WomanHolleringCreek() {
       <div className="mt-4">
         <Text className="font-bold">Contribution</Text>
         <ul className="list-disc ml-6">
-          <li>Analyzed how concepts could be translated to design goals</li>
-          <li>Annotated the text</li>
+          <li>Analyzed how concepts could be translated to design goals.</li>
           <li>
-            Created paper prototype with dynamic elements to simulate gameplay
+            Created paper prototype with dynamic elements to simulate gameplay.
           </li>
-          <li>Edited final product in Adobe Premiere Pro</li>
+          <li>Edited final product in Adobe Premiere Pro.</li>
         </ul>
       </div>
 
